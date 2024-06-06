@@ -8,15 +8,15 @@
 
  - LogIn form
    - sign up form
-   -Form Validation
+   - Form Validation
    - useRef Hook
    - Firebase  Setup
    - Deploying app to production
    - create SignUp User Account 
    - Impliment sign In User API
    - created Redux Store with userSlice
-   -Implimented Sign Out
-   -Update Profile
+   - Implimented Sign Out
+   - Update Profile
    
 
 
