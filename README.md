@@ -31,7 +31,15 @@
    - Upadte Store with Trailer Video Data
    - Embadded the youtube Video and make it autoplay and mute
    - Tailwind Classes to main Conatiner awesome
-  
+   
+   - Build  Secondary Container
+   - Build Movie List
+   - Build Movie cards
+   - TMDB Image CDN URL
+   - Made the Browse page amazing with Tailwind CSS
+   - usePopularMovies custom hook
+   
+    
    
 
 
