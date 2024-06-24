@@ -44,6 +44,20 @@
    - GPT Search Bar
    - (Multi-LAnguiage Feature in our App)=>BONUS
 
+   - Get Open AI Api key
+   - Gpt Search APi CAll
+
+   ## Pending
+   - fetched gptMoviesSuggestion from TMDB
+   - created gptSlice add data
+   - Reused Movie List components to make movie suggestion container
+   - Memoization
+   - Added .env file 
+   - Adding .env file to gitIgnore 
+   
+   ### Responsive
+   - MAKE OUR SITE RESPONSIVE
+
    
 
    
