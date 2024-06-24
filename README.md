@@ -47,7 +47,7 @@
    - Get Open AI Api key
    - Gpt Search APi CAll
 
-   ## Pending
+   ## Pending ->finished
    - fetched gptMoviesSuggestion from TMDB
    - created gptSlice add data
    - Reused Movie List components to make movie suggestion container
