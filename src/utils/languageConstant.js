@@ -1,15 +1,15 @@
 const lang = {
   en: {
     search: "Search",
-    gptSearchPlaceholder: "What would you like to watch today",
+    gptSearchPlaceholder: "What type of movie do you feel like watching today ?",
   },
   hindi: {
     search: "खोज",
-    gptSearchPlaceholder: "आज आप क्या देखना चाहेंगे",
+    gptSearchPlaceholder: "आज आपका किस प्रकार की फिल्म देखने का मन है ?",
   },
   spanish: {
     search: "Buscar",
-    gptSearchPlaceholder: "¿Qué te gustaría ver hoy?",
+    gptSearchPlaceholder: "¿Qué tipo de película te apetece ver hoy?",
   },
 };
 
