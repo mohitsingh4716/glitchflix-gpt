@@ -1,6 +1,6 @@
 import Header from "./Header";
 import React, { useRef, useState } from "react";
-import { checkValidDat_signin} from "../utils/validate";
+import { checkValidDat_signin } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -12,12 +12,11 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { BG_URL, USER_AVTAR } from "../utils/constants";
 
-
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  
- const dispatch= useDispatch();
+
+  const dispatch = useDispatch();
 
   const name = useRef(null);
   const email = useRef(null);
@@ -35,7 +34,7 @@ const Login = () => {
 
     const message = checkValidDat_signin(
       email.current.value,
-      password.current.value,
+      password.current.value
     );
 
     setErrorMessage(message);
@@ -56,24 +55,24 @@ const Login = () => {
           // console.log(user);
           updateProfile(user, {
             displayName: name.current.value,
-             photoURL: USER_AVTAR
-          }).then(() => {
-            // Profile updated!
-            const { uid, email, displayName, photoURL } = auth.currentUser;
-          dispatch(
-          addUser({
-            uid: uid,
-            email: email,
-            displayName: displayName,
-            photoURL: photoURL,
+            photoURL: USER_AVTAR,
           })
-        );
-        
-          }).catch((error) => {
-            // An error occurred
-            setErrorMessage(error.message);
-          });
-         
+            .then(() => {
+              // Profile updated!
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+            })
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error.message);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -91,7 +90,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           // console.log(user);
-          
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -105,16 +103,12 @@ const Login = () => {
     <div className="bg-gray-200">
       <Header />
       <div className="absolute">
-        <img
-          className="h-screen object-cover"
-          src={BG_URL}
-          alt="bg"
-        ></img>
+        <img className="h-screen object-cover" src={BG_URL} alt="bg"></img>
       </div>
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-75"
+        className="w-full md:w-3/12 absolute p-12 bg-black rounded-md my-36 mx-auto right-0 left-0 text-white bg-opacity-75"
       >
         <h1 className="font-bold text-3xl p-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -151,10 +145,14 @@ const Login = () => {
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className=" py-2 cursor-pointer" onClick={toggleSignInForm}>
-          {isSignInForm
-            ? "New to Netflix? Sign Up Now"
-            : "Already registered?  Sign In Now "}
+        <p className=" py-2">
+          {isSignInForm ? "New to Glitchflix? " : "Already registered? "}
+          <span
+            onClick={toggleSignInForm}
+            className="text-blue-500 cursor-pointer"
+          >
+            {isSignInForm ? "Sign Up" : "Sign In"}
+          </span>
         </p>
       </form>
     </div>

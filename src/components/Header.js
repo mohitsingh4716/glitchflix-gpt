@@ -4,9 +4,10 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO_URL, SUPPORTED_LANGUAGE } from "../utils/constants";
+import {  SUPPORTED_LANGUAGE } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import logo from "../assets/mainlogo.svg";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Header = () => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         const { uid, email, displayName, photoURL } = user;
+        // console.log(user);
         dispatch(
           addUser({
             uid: uid,
@@ -63,7 +65,8 @@ const Header = () => {
 
   return (
     <div className="absolute w-full px-8 py-2 bg-gradient-to-b  z-10 flex flex-col md:flex-row justify-between ">
-      <img className="w-44 mx-auto  md:mx-0" src={LOGO_URL} alt="logo"></img>
+      {/* <img className="w-44 mx-auto  md:mx-0" src={LOGO_URL} alt="logo"></img> */}
+      <img className="w-[270px] mx-auto  md:mx-0" src={logo} alt="logo"></img>
 
       {user && (
         <div className="flex justify-between p-2">
@@ -88,9 +91,10 @@ const Header = () => {
           </button>
 
           <img
-            className="hidden md:block w-12 h-12 rounded-lg "
+            className="hidden md:block w-12 h-12 rounded-full cursor-pointer"
             alt="usericon"
-            src={user.photoURL}
+            // src={user.photoURL}
+            src="https://yt3.googleusercontent.com/ytc/AIdro_mmfEvh2huKGBoPiKiujowwLIaE7-Rk6sJIFn18YGVohBs=s160-c-k-c0x00ffffff-no-rj"
           ></img>
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)

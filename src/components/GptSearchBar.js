@@ -27,7 +27,7 @@ const GptSearchBar = () => {
   // searchMovieTMDB("Dil se");
 
   const handleGptSearchClick = async () => {
-    console.log(searchText.current.value);
+    // console.log(searchText.current.value);
     // make API call to GPT API and get Movie Results
 
     const gptQuery =
