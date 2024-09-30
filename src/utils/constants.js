@@ -34,7 +34,7 @@ export const SUPPORTED_LANGUAGE = [
 
 export const GEMINI_KEY=process.env.REACT_APP_API_KEY_GEMINI;
 
-export const FIREBASE_KEY=process.env.REACT_APP_API_KEY_FIREBASE;
+// export const FIREBASE_KEY=process.env.REACT_APP_API_KEY_FIREBASE;
 
 
 // export const OPEN_AI_KEY= process.env.REACT_APP_OPENAI_KEY;
