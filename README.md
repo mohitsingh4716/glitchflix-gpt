@@ -1,5 +1,5 @@
 
-# Netflix GPT
+# Glitchflix GPT
 
 - create React App
 - configured TailwindCSS
