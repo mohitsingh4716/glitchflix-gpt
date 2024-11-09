@@ -12,7 +12,7 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   // apiKey:FIREBASE_KEY,
   apiKey:"AIzaSyDTpTwxJvllED74L5XZMY6-dPQlwP5LD84",
-  authDomain: "netflixgpt-28daf.firebaseapp.com",
+  authDomain: "glitchflix-gpt-biws.vercel.app",
   projectId: "netflixgpt-28daf",
   storageBucket: "netflixgpt-28daf.appspot.com",
   messagingSenderId: "103182876288",
