@@ -11,7 +11,7 @@ const MainContainer = () => {
     const mainMovie= movies[0];
     // console.log(mainMovie);
 
-    const {original_title, overview,id}= mainMovie;
+    const {original_title, overview}= mainMovie;
 
   return (
     <div className="pt-[25%] bg-black md:pt-0" >

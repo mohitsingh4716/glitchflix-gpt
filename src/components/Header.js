@@ -92,10 +92,14 @@ const Header = () => {
           </button>
 
           <img
-            className="hidden md:block w-12 h-12 rounded-full cursor-pointer"
+            className="hidden mt-2 md:block w-9 h-9 rounded-lg cursor-pointer"
             alt="usericon"
-            // src={user.photoURL}
-            src="https://yt3.googleusercontent.com/ytc/AIdro_mmfEvh2huKGBoPiKiujowwLIaE7-Rk6sJIFn18YGVohBs=s160-c-k-c0x00ffffff-no-rj"
+            s src={
+              user?.displayName === "Mohit Kumar"
+                ? "https://yt3.googleusercontent.com/ytc/AIdro_mmfEvh2huKGBoPiKiujowwLIaE7-Rk6sJIFn18YGVohBs=s160-c-k-c0x00ffffff-no-rj"
+                : user?.photoURL
+            }
+            // src="https://yt3.googleusercontent.com/ytc/AIdro_mmfEvh2huKGBoPiKiujowwLIaE7-Rk6sJIFn18YGVohBs=s160-c-k-c0x00ffffff-no-rj"
           ></img>
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)

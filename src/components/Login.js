@@ -10,7 +10,8 @@ import { auth } from "../utils/firebase";
 
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { BG_URL, USER_AVTAR } from "../utils/constants";
+import  USER_AVTARR  from "../assets/userAvatar.jpg";
+import BG_URLL from "../assets/glitchbg.jpg";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -27,11 +28,6 @@ const Login = () => {
   };
 
   const handleButtonClick = () => {
-    // validate the data
-
-    // console.log(email.current.value);
-    // console.log(password.current.value);
-
     const message = checkValidDat_signin(
       email.current.value,
       password.current.value
@@ -55,7 +51,7 @@ const Login = () => {
           // console.log(user);
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: USER_AVTAR,
+            photoURL: USER_AVTARR,
           })
             .then(() => {
               // Profile updated!
@@ -103,7 +99,7 @@ const Login = () => {
     <div className="bg-gray-200">
       <Header />
       <div className="absolute">
-        <img className="h-screen object-cover" src={BG_URL} alt="bg"></img>
+        <img className="h-screen object-cover" src={BG_URLL} alt="bg"></img>
       </div>
 
       <form
